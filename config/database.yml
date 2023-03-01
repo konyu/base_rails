@@ -1,0 +1,30 @@
+# SQLite. Versions 3.8.0 and up are supported.
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem "sqlite3"
+#
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  socket: /tmp/mysql.sock
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: web_development
+  username: root
+  password: password
+  host: db
+
+test:
+  <<: *default
+  database: depot_server_test
+  username: root
+  password: password
+  host: db
+
+production:
+  <<: *default
+  database: db/production.sqlite3
