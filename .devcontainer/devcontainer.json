@@ -24,7 +24,8 @@
 			"extensions": [
 				"castwide.solargraph", // solargraph
 				"rebornix.Ruby", // Ruby
-				"misogi.ruby-rubocop"// Rubocop
+				"misogi.ruby-rubocop", // Rubocop
+				"KoichiSasada.vscode-rdbg" // Ruby Debug
 			]
 		}
 	}
