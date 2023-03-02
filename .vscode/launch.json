@@ -5,18 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "rdbg",
-            "name": "Debug current file with rdbg",
-            "request": "launch",
-            "script": "${file}",
-            "args": [],
-            "askParameters": true
-        },
-        {
             "name": "Debug Rails",
             "type": "rdbg",
             "request": "launch",
             "script": "bin/rails server -b 0.0.0.0",
+        },
+        {
+            "name": "Debug Rspec with current file",
+            "type": "rdbg",
+            "request": "launch",
+            "script": "bin/rspec ${file}",
+            "args": [],
+            "askParameters": true,
+            "useBundler": true
         }
     ]
 }
