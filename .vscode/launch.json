@@ -20,6 +20,7 @@
             "command": "bundle exec rspec",
             "script": "${file}",
             "args": [],
+            "askParameters": true // 実行コマンドをウインドウで確認。特定のテスト
         }
     ]
 }
