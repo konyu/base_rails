@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -20,7 +17,7 @@
             "command": "bundle exec rspec",
             "script": "${file}",
             "args": [],
-            "askParameters": true // 実行コマンドをウインドウで確認。特定のテスト
+            "askParameters": true // 実行コマンドをウインドウで確認。特定の行を実行するなど調整可能にする
         }
     ]
 }
