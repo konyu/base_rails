@@ -18,7 +18,6 @@ RSpec.describe CommentsController, type: :routing do
       expect(get: "/comments/1/edit").to route_to("comments#edit", id: "1")
     end
 
-
     it "routes to #create" do
       expect(post: "/comments").to route_to("comments#create")
     end

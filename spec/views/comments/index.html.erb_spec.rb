@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe "comments/index", type: :view do
   before(:each) do
     assign(:comments, [
-      Comment.create!(
-        name: "Name",
-        post: nil
-      ),
-      Comment.create!(
-        name: "Name",
-        post: nil
-      )
-    ])
+             Comment.create!(
+               name: "Name",
+               post: nil
+             ),
+             Comment.create!(
+               name: "Name",
+               post: nil
+             )
+           ])
   end
 
   it "renders a list of comments" do
