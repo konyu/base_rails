@@ -8,16 +8,18 @@
             "name": "Debug Rails",
             "type": "rdbg",
             "request": "launch",
-            "script": "bin/rails server -b 0.0.0.0",
+            // "command": "bundle exec rails", //# bundle exec rails だとデバッガで止まらない
+            "command": "bin/rails",
+            "script": "s",
+            "args": ["-b","0.0.0.0"],
         },
         {
             "name": "Debug Rspec with current file",
             "type": "rdbg",
             "request": "launch",
-            "script": "bin/rspec ${file}",
+            "command": "bundle exec rspec",
+            "script": "${file}",
             "args": [],
-            "askParameters": true,
-            "useBundler": true
         }
     ]
 }
