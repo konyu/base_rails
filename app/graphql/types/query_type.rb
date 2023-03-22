@@ -6,9 +6,12 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
-    field :posts, [Types::PostType], null: false
-    def posts
-      Post.all
-    end
+    # QueryTypeに直書きする場合
+    # field :posts, [Types::PostType], null: false
+    # def posts
+    #   Post.all
+    # end
+    # resolverクラスで定義する場合
+    field :posts, resolver: Resolvers::PostConnectionResolver
   end
 end
